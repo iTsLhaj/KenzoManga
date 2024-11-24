@@ -1,0 +1,29 @@
+Exception occurred: ServerSelectionTimeoutError
+Arguments: ("kenzocluster-shard-00-01.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable,kenzocluster-shard-00-00.8ycqo.mongodb.net:27017: timed out,kenzocluster-shard-00-02.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable, Timeout: 60.0s, Topology Description: <TopologyDescription id: 6743947e8d58080b8b644073, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('kenzocluster-shard-00-00.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('kenzocluster-shard-00-00.8ycqo.mongodb.net:27017: timed out')>, <ServerDescription ('kenzocluster-shard-00-01.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('kenzocluster-shard-00-01.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable')>, <ServerDescription ('kenzocluster-shard-00-02.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('kenzocluster-shard-00-02.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable')>]>",)
+Exception message: kenzocluster-shard-00-01.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable,kenzocluster-shard-00-00.8ycqo.mongodb.net:27017: timed out,kenzocluster-shard-00-02.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable, Timeout: 60.0s, Topology Description: <TopologyDescription id: 6743947e8d58080b8b644073, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('kenzocluster-shard-00-00.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('kenzocluster-shard-00-00.8ycqo.mongodb.net:27017: timed out')>, <ServerDescription ('kenzocluster-shard-00-01.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('kenzocluster-shard-00-01.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable')>, <ServerDescription ('kenzocluster-shard-00-02.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('kenzocluster-shard-00-02.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable')>]>
+
+
+ ---------- Stack Trace ----------
+Traceback (most recent call last):
+  File "/home/lh4j/workspace/mangaKenzo/backend/ping.py", line 21, in test_connection
+    client.admin.command('ping')
+  File "/home/lh4j/workspace/mangaKenzo/backend/.venv/lib/python3.12/site-packages/pymongo/database.py", line 751, in command
+    with self.__client._socket_for_reads(
+  File "/usr/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/lh4j/workspace/mangaKenzo/backend/.venv/lib/python3.12/site-packages/pymongo/mongo_client.py", line 1387, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lh4j/workspace/mangaKenzo/backend/.venv/lib/python3.12/site-packages/pymongo/mongo_client.py", line 1346, in _select_server
+    server = topology.select_server(server_selector)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lh4j/workspace/mangaKenzo/backend/.venv/lib/python3.12/site-packages/pymongo/topology.py", line 244, in select_server
+    return random.choice(self.select_servers(selector,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lh4j/workspace/mangaKenzo/backend/.venv/lib/python3.12/site-packages/pymongo/topology.py", line 202, in select_servers
+    server_descriptions = self._select_servers_loop(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lh4j/workspace/mangaKenzo/backend/.venv/lib/python3.12/site-packages/pymongo/topology.py", line 218, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: kenzocluster-shard-00-01.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable,kenzocluster-shard-00-00.8ycqo.mongodb.net:27017: timed out,kenzocluster-shard-00-02.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable, Timeout: 60.0s, Topology Description: <TopologyDescription id: 6743947e8d58080b8b644073, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('kenzocluster-shard-00-00.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('kenzocluster-shard-00-00.8ycqo.mongodb.net:27017: timed out')>, <ServerDescription ('kenzocluster-shard-00-01.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('kenzocluster-shard-00-01.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable')>, <ServerDescription ('kenzocluster-shard-00-02.8ycqo.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('kenzocluster-shard-00-02.8ycqo.mongodb.net:27017: [Errno 101] Network is unreachable')>]>

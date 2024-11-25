@@ -19,11 +19,11 @@ const images: string[] = [
 ]
 
 const images_v2: string[] = [
-
-  "https://media.discordapp.net/attachments/991693504520663080/1310273912826892298/waaa-lhox.gif?ex=67449f2c&is=67434dac&hm=43cca6fb7268e64acf08dc725fa6f09f29504d4a0328fb0bd9a708379b1ba2ed&=",
-  "https://media.discordapp.net/attachments/1183075201580286063/1274862271029444649/Twitchonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif?ex=674455c3&is=67430443&hm=cabef5f4943b17d60f3822c9dcba9571935192fe8607822ea356a1db057a093a&=",
-  "https://media.discordapp.net/attachments/621099308694896660/1215084214773350461/mathe_t9louza.gif?ex=6744649b&is=6743131b&hm=0fcca070aacd9fe31cb7eed0e8ecd9d04e8cef1e3bd8aaeb8d2174e8d0168aa4&="
-
+	
+	"https://media.discordapp.net/attachments/993902499658473574/1310624179141345351/lhwari1.gif?ex=6745e562&is=674493e2&hm=49c2cc4831819d69698d8ff6a1b146e10366b61f9dc5ff0aa1e5dc67eb42bd2d&=&width=550&height=310",
+	"https://media.discordapp.net/attachments/993902499658473574/1310624198388879391/lhwari2.gif?ex=6745e567&is=674493e7&hm=1a655855e1c16b78085ddafecf7f8b2cafa2572d3edb79f4a55ceed703e893d1&=",
+	"https://media.discordapp.net/attachments/993902499658473574/1310624214339944488/lhwari3.gif?ex=6745e56a&is=674493ea&hm=f78f9dae80b5594c3440345c9a750a9428f9e3bc2f2c5d8a4933731803fee5ec&=",
+	"https://media.discordapp.net/attachments/993902499658473574/1310624233940058162/lmathe.gif?ex=6745e56f&is=674493ef&hm=dec885b47e2884270780d3e4608b8ea76170b65660ea35c16d0e1adb00cd2d61&=&width=550&height=310"
 
 ]
 
